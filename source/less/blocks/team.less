@@ -1,0 +1,91 @@
+.team {
+  padding-top: 33px;
+}
+
+.team__slider-wrapper {
+  position: relative;
+}
+
+.team__control-left {
+  width: 10px;
+  height: 20px;
+  background-image: url("../../img/left.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 57px;
+}
+
+.team__control-right {
+  width: 10px;
+  height: 20px;
+  background-image: url("../../img/right.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  right: 57px;
+}
+
+.team__title {
+  .titleText;
+  margin-bottom: 25px;
+}
+
+.team__desc {
+  .brownSmallText;
+  line-height: 19.6px;
+  min-width: 252px;
+  margin-bottom: 99px;
+}
+
+.team__item-list {
+  .list-reset;
+}
+
+.team__item {
+  display: none;
+  min-width: 290px;
+  min-height: 275px;
+  background-color: @black;
+}
+
+.team__slider--slide-1:checked ~ .team__slider-wrapper .team__item-list #team-slide-1,
+.team__slider--slide-2:checked ~ .team__slider-wrapper .team__item-list #team-slide-2 {
+  display: block;
+}
+
+
+.team__item-photo {
+  position: absolute;
+  margin-left: 82px;
+  margin-top: -63px;
+}
+
+.team__item-name {
+  .brownMediumText;
+  padding-top: 85px;
+  margin-bottom: 0;
+}
+
+.team__item-profession {
+  .brownRegularText;
+  line-height: 19.03px;
+  margin-top: 2px;
+}
+
+.team__item-comment {
+  .whiteSmallText;
+  line-height: 19.6px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.team__item-socials {
+  margin-top: 24px;
+  width: 70px;
+}

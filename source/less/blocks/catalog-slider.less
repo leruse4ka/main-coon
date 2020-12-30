@@ -1,0 +1,74 @@
+.catalog-slider {
+  margin-top: 19px;
+}
+
+.catalog-slider__controls {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.catalog-slider__controls label{
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.catalog-slider__controls label:hover {
+  color: @brown;
+  opacity: 0.5;
+}
+
+.catalog-slider__controls label:active {
+  color: @brown;
+  opacity: 1;
+}
+
+.catalog-slider__item-list {
+  .list-reset;
+  position: relative;
+}
+
+.catalog-slider__item {
+  display: none;
+  margin-top: 9px;
+  filter: drop-shadow(0px 0px 30px rgba(3, 3, 3, 0.15));
+
+  &::before {
+    content: "";
+    background-image: url("../../img/left.svg");
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    top: 45.9%;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../img/right.svg");
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    top: 45.9%;
+    right: 0px;
+  }
+}
+
+.catalog-slider__item img{
+  height: 100%;
+  width: 100%;
+}
+
+.cats-boy:checked ~ .catalog-slider__wrapper .catalog-slider__controls .catalog-slider__controls-boy,
+.cats-girl:checked ~ .catalog-slider__wrapper .catalog-slider__controls .catalog-slider__controls-girl,
+.cats-kitten:checked ~ .catalog-slider__wrapper .catalog-slider__controls .catalog-slider__controls-kitten {
+  opacity: 1;
+}
+
+.cats-boy:checked ~ .catalog-slider__wrapper .catalog-slider__item-list #boys,
+.cats-girl:checked ~ .catalog-slider__wrapper .catalog-slider__item-list #girls,
+.cats-kitten:checked ~ .catalog-slider__wrapper .catalog-slider__item-list #kittens {
+  display: block;
+}
+
